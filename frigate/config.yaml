@@ -8,7 +8,7 @@ panel_title: Frigate
 slug: frigate
 description: NVR with realtime local object detection for IP cameras
 url: "https://github.com/blakeblackshear/frigate"
-image: ghcr.io/blakeblackshear/frigate
+image: ghcr.io/blakeblackshear/frigate:stable-rk
 startup: application
 boot: auto
 init: false
@@ -37,7 +37,14 @@ ports_description:
   1984/tcp: go2rtc API
   1935/tcp: RTMP streams
 host_network: false
+security_opt:
+  - apparmor=unconfined
+  - systempaths=unconfined
 devices:
+  - /dev/dri
+  - /dev/dma_heap
+  - /dev/rga
+  - /dev/mpp_service
   - /dev/dri/renderD128
   - /dev/apex_0
   - /dev/apex_1
