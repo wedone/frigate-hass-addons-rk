@@ -1,5 +1,5 @@
 name: Frigate
-version: 0.15.0
+version: 0.15.0-rk
 breaking_versions:
   - 0.14.0
   - 0.14.1
@@ -9,7 +9,7 @@ panel_title: Frigate
 slug: frigate-rknpu
 description: NVR with realtime local object detection for IP cameras
 url: "https://github.com/blakeblackshear/frigate"
-image: ghcr.io/blakeblackshear/frigate:0.15.0-rk
+image: ghcr.io/blakeblackshear/frigate
 startup: application
 boot: manual
 init: false
